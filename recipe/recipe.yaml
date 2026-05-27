@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lammpsparser
-  version: "0.0.3"
+  version: "0.0.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/lammpsparser-${{ version }}.tar.gz
-  sha256: cbd2456fde5fa1bea705d2c82bb0bca9978192e34a0a130e947dd69a71fd9e0c
+  sha256: c118c6ec19d543f9abd5a081bdd24cd1020a0a5982c34269b3af7e0f1aca9b4d
 
 build:
   number: 0
