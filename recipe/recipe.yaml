@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lammpsparser
-  version: "0.0.5"
+  version: "0.0.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/lammpsparser-${{ version }}.tar.gz
-  sha256: e0eb79e82b9257902b99a8249332dea1946cebb15c78d371de9f0f847e411b4f
+  sha256: 08bcf4e394184b1253cabeb8db74d1287ba54aeaf2382201660a79a89b2c4b42
 
 build:
   number: 0
@@ -30,9 +30,10 @@ requirements:
   run:
     - python >=${{ python_min }}
     - scipy >=1.11.1,<=1.17.1
-    - ase >=3.22.1,<=3.28.0
+    - ase >=3.22.1,<=3.29.0
     - numpy >=1.26.0,<=2.4.6
     - pandas >=2.0.3,<=3.0.3
+    - typing_extensions  # ase requires it
 tests:
   - python:
       imports:
